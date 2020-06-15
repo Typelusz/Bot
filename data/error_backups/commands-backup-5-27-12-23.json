@@ -1,0 +1,244 @@
+[null,{"name":"Help","permissions":"NONE","restriction":"0","actions":[{"channel":"0","varName":"","message":"```\n!Help       Shows this message\n!Level      Displays the user's level\n```","storage":"0","varName2":"","name":"Send Message"}],"_id":"dOBdr"},{"name":"Level","permissions":"NONE","restriction":"1","actions":[{"member":"1","varName":"","dataName":"level","defaultVal":"1","storage":"1","varName2":"myLevel","name":"Store Member Data"},{"channel":"0","varName":"","message":"Twój level to ${tempVars(\"myLevel\")}!","storage":"0","varName2":"","iffalse":"0","iffalseVal":"","name":"Send Message"}],"_id":"UMPml"},{"name":"<div><center>Muzyka</div>","permissions":"NONE","restriction":"1","_id":"mOQSB","actions":[]},{"name":"join","permissions":"NONE","restriction":"1","_id":"EKDme","actions":[{"channel":"0","varName":"","name":"Join Voice Channel"},{"title":"","author":"","color":"#b50909","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"join","name":"Create Embed Message"},{"storage":"1","varName":"join","message":"Widzę że chcesz czegoś ode mnie... okej, dołączam do ciebie na kanał!","name":"Set Embed Description"},{"storage":"1","varName":"join","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"j","permissions":"NONE","restriction":"1","_id":"cOZFy","actions":[{"channel":"0","varName":"","name":"Join Voice Channel"},{"title":"","author":"","color":"#b50909","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"join","name":"Create Embed Message"},{"storage":"1","varName":"join","message":"Widzę że chcesz czegoś ode mnie... okej, dołączam do ciebie na kanał!","name":"Set Embed Description"},{"storage":"1","varName":"join","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"wyjdź","permissions":"NONE","restriction":"1","_id":"eKhBT","actions":[{"name":"Leave Voice Channel"},{"title":"","author":"","color":"#b50909","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"wyjdz","name":"Create Embed Message"},{"storage":"1","varName":"wyjdz","message":"Serio? \nNo okej już wychodzę...\n:persevere:","name":"Set Embed Description"},{"storage":"1","varName":"wyjdz","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"w","permissions":"NONE","restriction":"1","_id":"yYguJ","actions":[{"name":"Leave Voice Channel"},{"title":"","author":"","color":"#b50909","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"wyjdz","name":"Create Embed Message"},{"storage":"1","varName":"wyjdz","message":"Serio? \nNo okej już wychodzę...\n:persevere:","name":"Set Embed Description"},{"storage":"1","varName":"wyjdz","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"play","permissions":"NONE","restriction":"1","_id":"YyRcd","actions":[{"info":"1","infoIndex":"1","storage":"1","varName":"search","name":"Store Command Params"},{"server":"0","varName":"","storage":"1","varName2":"botmen","name":"Get Bot as Member"},{"type":"0","input":"${tempVars(\"search\")}","info0":"1","info1":"1","apikey":"AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","results":"1","storage":"1","varName":"videokind","name":"YouTube Search"},{"token":"","user":"","pass":"","url":"https://www.google.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].snippet.channelTitle","storage":"2","varName":"channel","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"token":"","user":"","pass":"","url":"https://www.google.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].snippet.publishedAt","storage":"2","varName":"published","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"token":"","user":"","pass":"","url":"https://www.google.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].snippet.thumbnails.default.url","storage":"2","varName":"coverart","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"token":"","user":"","pass":"","url":"https://www.google.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].snippet.title","storage":"2","varName":"title","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"token":"","user":"","pass":"","url":"https://www.google.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].id.videoId","storage":"2","varName":"url","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"channel":"0","varName":"","info":"2","storage":"1","varName2":"playchannel","name":"Store Voice Channel Info"},{"title":"🎶Teraz gramy: ${serverVars(\"title\")}","author":"","color":"#0080FF","url":"https://www.youtube.com/watch?v=${serverVars(\"url\")}","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"${serverVars(\"coverart\")}","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"embed","name":"Create Embed Message"},{"time":"${serverVars(\"published\")}","storage":"2","varName":"realpublished","name":"Convert Timestamp to Date"},{"storage":"1","varName":"embed","fieldName":"Gramy na:","message":"`${tempVars(\"playchannel\")}`","inline":"0","name":"Add Embed Field"},{"storage":"1","varName":"embed","fieldName":"Opublikowano:","message":"`${serverVars(\"realpublished\")}`","inline":"0","name":"Add Embed Field"},{"storage":"1","varName":"embed","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"channel":"0","varName":"","name":"Join Voice Channel"},{"url":"${serverVars(\"url\")}","seek":"0","volume":"","passes":"1","bitrate":"64000","type":"0","name":"Play YouTube Video"},{"name":"End Action Sequence"}]},{"name":"p","permissions":"NONE","restriction":"1","_id":"UaNCc","actions":[{"info":"1","infoIndex":"1","storage":"1","varName":"search","name":"Store Command Params"},{"server":"0","varName":"","storage":"1","varName2":"botmen","name":"Get Bot as Member"},{"type":"0","input":"${tempVars(\"search\")}","info0":"1","info1":"1","apikey":"AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","results":"1","storage":"1","varName":"videokind","name":"YouTube Search"},{"token":"","user":"","pass":"","url":"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].snippet.channelTitle","storage":"2","varName":"channel","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"token":"","user":"","pass":"","url":"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].snippet.publishedAt","storage":"2","varName":"published","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"token":"","user":"","pass":"","url":"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].snippet.thumbnails.default.url","storage":"2","varName":"coverart","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"token":"","user":"","pass":"","url":"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].snippet.title","storage":"2","varName":"title","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"token":"","user":"","pass":"","url":"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyCyEDL_1m8LRZUSgy_6jGm9405xCjzEoTA","path":"items[0].id.videoId","storage":"2","varName":"url","debugMode":"1","headers":"","name":"Store Json From WebAPI"},{"channel":"0","varName":"","info":"2","storage":"1","varName2":"playchannel","name":"Store Voice Channel Info"},{"title":"🎶Teraz gramy: ${serverVars(\"title\")}","author":"","color":"#0080FF","url":"https://www.youtube.com/watch?v=${serverVars(\"url\")}","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"${serverVars(\"coverart\")}","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"embed","name":"Create Embed Message"},{"time":"${serverVars(\"published\")}","storage":"2","varName":"realpublished","name":"Convert Timestamp to Date"},{"storage":"1","varName":"embed","fieldName":"Gramy na:","message":"`${tempVars(\"playchannel\")}`","inline":"0","name":"Add Embed Field"},{"storage":"1","varName":"embed","fieldName":"Opublikowano:","message":"`${serverVars(\"realpublished\")}`","inline":"0","name":"Add Embed Field"},{"storage":"1","varName":"embed","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"channel":"0","varName":"","name":"Join Voice Channel"},{"url":"${serverVars(\"url\")}","seek":"0","volume":"","passes":"1","bitrate":"64000","type":"0","name":"Play YouTube Video"},{"name":"End Action Sequence"}]},{"name":"volume","permissions":"NONE","restriction":"1","_id":"UIvQs","actions":[{"info":"0","infoIndex":"1","storage":"1","varName":"volume_bota","name":"Store Command Params"},{"volume":"${tempVars(\"volume_bota\")}","name":"Set Audio Volume"},{"channel":"0","varName":"","message":":loud_sound: Głośność ustawiona na `${tempVars(\"volume_bota\")}`","storage":"0","varName2":"","iffalse":"0","iffalseVal":"","name":"Send Message"}]},{"name":"<div><center>Ekonomia</div>","permissions":"NONE","restriction":"1","_id":"vMpdN","actions":[]},{"name":"bank","permissions":"NONE","restriction":"1","_id":"hKwTK","actions":[{"member":"1","varName":"","dataName":"gold","defaultVal":"0","storage":"1","varName2":"myGold","name":"Store Member Data"},{"channel":"0","varName":"","message":"${member} obecnie posiadasz ${tempVars(\"myGold\")}!","storage":"0","varName2":"","iffalse":"0","iffalseVal":"","name":"Send Message"}]},{"name":"praca","permissions":"NONE","restriction":"1","_id":"KKLYs","actions":[{"member":"0","varName":"","dataName":"gold","defaultVal":"0","storage":"1","varName2":"myGold","name":"Store Member Data"},{"storage":"1","varName":"result","min":"10","max":"100","name":"Generate Random Number"},{"channel":"0","varName":"","message":"Zarabiasz.","storage":"1","varName2":"message","iffalse":"0","iffalseVal":"","name":"Send Message"},{"time":"1","measurement":"1","name":"Wait"},{"storage":"1","varName":"message","message":"Zarabiasz..","storage2":"1","varName2":"message","name":"Edit Message"},{"time":"1","measurement":"1","name":"Wait"},{"storage":"1","varName":"message","message":"Zarabiasz...","storage2":"1","varName2":"message","name":"Edit Message"},{"time":"1","measurement":"1","name":"Wait"},{"storage":"1","varName":"message","message":"Zarobiłeś ${tempVars(\"result\")}!","storage2":"1","varName2":"message","name":"Edit Message"},{"member":"1","varName":"","dataName":"gold","changeType":"1","value":"tempVars(\"result\")","name":"Control Member Data"}],"_timeRestriction":6},{"name":"sklep","permissions":"NONE","restriction":"1","_id":"YXveQ","actions":[{"title":"Sklep","author":"","color":"#ffc403","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"sklep","name":"Create Embed Message"},{"storage":"1","varName":"sklep","message":"> Ranga kolor żółty - koszt 10 monet","name":"Set Embed Description"},{"storage":"1","varName":"sklep","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"kup-żółty","permissions":"NONE","restriction":"1","_id":"gtLUF","actions":[{"member":"1","varName":"","dataName":"gold","defaultVal":"0","storage":"1","varName2":"myGold","name":"Store Member Data"},{"info":"1","find":"kolor żółty","storage":"1","varName":"role","name":"Find Role"},{"member":"1","varName":"","role":"3","varName2":"role","iftrue":"0","iftrueVal":"","iffalse":"3","iffalseVal":"4","name":"Check If Member has Role"},{"title":"","author":"","color":"#ffc403","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"false","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"Tprzedmiot","name":"Create Embed Message"},{"storage":"1","varName":"Tprzedmiot","message":"${member}, posiadasz już ten przedmiot nie możesz mieć dwóch... ZOSTAW COŚ INNYM!!!","name":"Set Embed Description"},{"storage":"1","varName":"Tprzedmiot","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"name":"End Action Sequence"},{"storage":"1","varName":"myGold","comparison":"4","value":"9","iftrue":"3","iftrueVal":"4","iffalse":"0","iffalseVal":"","name":"Check Variable"},{"title":"","author":"","color":"#ffc403","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"biedak","name":"Create Embed Message"},{"storage":"1","varName":"biedak","message":"${member} jesteś za biedny by kupiś ten przedmiot! Idź coś zarób!","name":"Set Embed Description"},{"storage":"1","varName":"biedak","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"name":"End Action Sequence"},{"member":"1","varName":"","dataName":"gold","changeType":"1","value":"-10","name":"Control Member Data"},{"title":"","author":"","color":"#ffc403","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"zakupU","name":"Create Embed Message"},{"storage":"1","varName":"zakupU","message":"Gratulujemy zakupu ranga zostanie przypisana!","name":"Set Embed Description"},{"member":"1","varName2":"","role":"3","varName":"role","name":"Add Member Role"},{"storage":"1","varName":"zakupU","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"name":"End Action Sequence"}]},{"name":"wyzeruj","permissions":"ADMINISTRATOR","restriction":"1","_id":"gjIJF","actions":[{"member":"0","varName":"","dataName":"gold","changeType":"0","value":"0","name":"Control Member Data"},{"channel":"0","varName":"","message":"${member} wyzerował konto użytkownika ${mentionedUser}! Tuż to kradzież w biały dzień!!!","storage":"0","varName2":"","iffalse":"0","iffalseVal":"","name":"Send Message"}]},{"name":"<div><center>Moderacja</div>","permissions":"NONE","restriction":"1","_id":"SBTHE","actions":[]},{"name":"sugestion","permissions":"ADMINISTRATOR","restriction":"1","_id":"FHpwM","actions":[{"info":"4","infoIndex":"1","storage":"2","varName":"sug","name":"Store Command Params"},{"channel":"0","varName":"","message":"Od teraz wszystkie sugestie będą wysyłane na ${mentionedChannel}! Czy to nie wspaniałe uczucie?","storage":"0","varName2":"","iffalse":"0","iffalseVal":"","name":"Send Message"},{"storage":"2","varName":"sug","name":"Save Variable"}]},{"name":"logs","permissions":"ADMINISTRATOR","restriction":"1","_id":"ruWCE","actions":[{"info":"4","infoIndex":"1","storage":"2","varName":"logs","name":"Store Command Params"},{"channel":"0","varName":"","message":"Od teraz wszytskie informacje będą się pojawiały na ${mentionedChannel}! Wpaniałe, prawda?","storage":"0","varName2":"","iffalse":"0","iffalseVal":"","name":"Send Message"},{"storage":"2","varName":"logs","name":"Save Variable"}]},{"name":"kick","permissions":"KICK_MEMBERS","restriction":"1","_id":"UOWWh","actions":[{"info":"1","infoIndex":"2","storage":"1","varName":"powod","name":"Store Command Params"},{"member":"0","varName":"","reason":"Zostałeś wyrzucony z serwera!\nPowód: ${tempVars(\"powod\")}\nJeżeli twierdzisz, że zostałeś wyrzucony napisz do właściciela serwera.","name":"Kick Member"},{"title":"","author":"","color":" #a90000","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"false","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"kicked","name":"Create Embed Message"},{"storage":"1","varName":"kicked","message":"${member} wyrzucił ${mentionedUser}!\nPowód: ${tempVars(\"powod\")}","name":"Set Embed Description"},{"storage":"1","varName":"kicked","channel":"6","varName2":"logs","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"ban","permissions":"BAN_MEMBERS","restriction":"1","_id":"vvyxR","actions":[{"info":"1","infoIndex":"2","storage":"1","varName":"powod","name":"Store Command Params"},{"member":"0","varName":"","reason":"Zostałeś zbanowany z serwera!\nPowód: ${tempVars(\"powod\")}\nJeżeli twierdzisz, że zostałeś zbanowany bez powodu napisz do właściciela serwera.","name":"Ban Member"},{"title":"","author":"","color":" #a90000","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"false","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"baned","name":"Create Embed Message"},{"storage":"1","varName":"baned","message":"${member} zbanował ${mentionedUser}!\nPowód: ${tempVars(\"powod\")}","name":"Set Embed Description"},{"storage":"1","varName":"baned","channel":"6","varName2":"logs","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"unban","permissions":"BAN_MEMBERS","restriction":"1","_id":"SAqhV","actions":[{"info":"1","infoIndex":"2","storage":"1","varName":"wiad","name":"Store Command Params"},{"info":"0","infoIndex":"1","storage":"1","varName":"Unbaneduser","name":"Store Command Params"},{"member":"0","varName":"","reason":"Zostałeś odbanowany z wiadomością:\n${tempVars(\"wiad\")}","name":"Unban Member"},{"title":"","author":"","color":" #a90000","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"false","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"unbaned","name":"Create Embed Message"},{"storage":"1","varName":"unbaned","message":"${member} odbanował ${tempVars(\"Unbaneduser\")}!\nTeraz może on spokojnie tu wrócić!","name":"Set Embed Description"},{"storage":"1","varName":"unbaned","channel":"6","varName2":"logs","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"mute-voice","permissions":"MUTE_MEMBERS","restriction":"1","_id":"RMMhH","actions":[{"info":"1","infoIndex":"2","storage":"1","varName":"Tmute","name":"Store Command Params"},{"member":"0","varName":"","mute":"0","name":"Set Member Mute"},{"title":"","author":"","color":" #a90000","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"false","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"Vmute","name":"Create Embed Message"},{"storage":"1","varName":"Vmute","message":"${member} odebrał prawo głosu na kanałach głosowych ${mentionedUser}nie usłyszymy go przez ${tempVars(\"Tmute\")}h!","name":"Set Embed Description"},{"storage":"1","varName":"Vmute","channel":"6","varName2":"logs","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"time":"${tempVars(\"Tmute\")}","measurement":"3","name":"Wait"},{"member":"0","varName":"","mute":"1","name":"Set Member Mute"},{"channel":"2","varName":"","message":"Odzyskałeś prawo głosu! Teraz możesz iść pogadać","storage":"0","varName2":"","iffalse":"0","iffalseVal":"","name":"Send Message"}]},{"name":"usuń","permissions":"ADMINISTRATOR","restriction":"1","_id":"yiLBr","actions":[{"info":"0","infoIndex":"1","storage":"1","varName":"usuniete","name":"Store Command Params"},{"storage":"0","varName":"","name":"Delete Message"},{"channel":"0","count":"${tempVars(\"usuniete\")}","condition":"0","custom":"","varName":"","name":"Delete Bulk Messages"},{"title":"","author":"","color":" #a90000","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"Uinfo","name":"Create Embed Message"},{"storage":"1","varName":"Uinfo","message":"${member} usunął **${tempVars(\"usuniete\")}** wiadomości! Strata nie do odzyskania!","name":"Set Embed Description"},{"storage":"1","varName":"Uinfo","channel":"6","varName2":"logs","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"}]},{"name":"warn","permissions":"NONE","restriction":"1","_id":"aIuqW","actions":[{"member":"1","varName":"","permission":"ADMINISTRATOR","iftrue":"3","iftrueVal":"4","iffalse":"0","iffalseVal":"","name":"Check Member Permissions"},{"title":"Brak uprawnień","author":"","color":"#a90000","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"false","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"brakp","name":"Create Embed Message"},{"storage":"1","varName":"brakp","message":"**Wygląda na to, że nie masz uprawnień by wykonać to działanie!**","name":"Set Embed Description"},{"storage":"1","varName":"brakp","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"name":"End Action Sequence"},{"condition":"1","comparison":"0","value":"","iftrue":"3","iftrueVal":"4","iffalse":"0","iffalseVal":"","name":"Check Parameters"},{"title":"","author":"","color":"#a90000","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"false","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"brak","name":"Create Embed Message"},{"storage":"1","varName":"brak","message":"Chcesz dać warna użytkownikow?\n**Wpisz:** `/warn @user [powód]`","name":"Set Embed Description"},{"storage":"1","varName":"brak","channel":"0","varName2":"","storage3":"0","varName3":"","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"name":"End Action Sequence"},{"server":"0","varName":"","info":"1","storage":"1","varName2":"id","name":"Store Server Info"},{"member":"0","varName":"","dataName":"${tempVars(\"id\")}.warnings","defaultVal":"0","storage":"1","varName2":"warnings","name":"Store Member Data"},{"member":"0","varName":"","info":"18","storage":"1","varName2":"WDtag","name":"Store Member Info"},{"member":"0","varName":"","info":"12","storage":"1","varName2":"img","name":"Store Member Info"},{"member":"0","varName":"","info":"3","storage":"1","varName2":"name","name":"Store Member Info"},{"member":"0","varName":"","info":"18","storage":"1","varName2":"username","name":"Store Member Info"},{"member":"1","varName":"","info":"18","storage":"1","varName2":"Wtag","name":"Store Member Info"},{"member":"1","varName":"","info":"12","storage":"1","varName2":"imgA","name":"Store Member Info"},{"server":"0","varName":"","info":"2","storage":"1","varName2":"Sname","name":"Store Server Info"}]},{"name":"=======","permissions":"NONE","restriction":"1","_id":"RCuGd","actions":[{"member":"1","varName":"","permission":"ADMINISTRATOR","iftrue":"3","iftrueVal":"5","iffalse":"0","iffalseVal":"","name":"Check Member Permissions"},{"title":"Brak uprawnień","author":"","color":"#a90000","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"","timestamp":"false","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"brakp","name":"Create Embed Message"},{"storage":"1","varName":"brakp","message":"**Wygląda na to, że nie masz uprawnień by wykonać to działanie!**","name":"Set Embed Description"}]},{"name":"<div><center>Sugestie</div>","permissions":"NONE","restriction":"1","_id":"sCndd","actions":[]},{"name":"zaproponuj","permissions":"NONE","restriction":"1","_id":"nHeyL","actions":[{"member":"1","varName":"","info":"3","storage":"1","varName2":"user","name":"Store Member Info"},{"member":"1","varName":"","info":"12","storage":"1","varName2":"avatar","name":"Store Member Info"},{"info":"1","infoIndex":"1","storage":"1","varName":"wiadomosc","name":"Store Command Params"},{"title":"Propozycja!","author":"${tempVars(\"user\")}","color":" #60ffb4","url":"","authorIcon":"","authorUrl":"","imageUrl":"","thumbUrl":"${tempVars(\"avatar\")}","timestamp":"true","debug":"false","text":"","year":"","month":"","day":"","hour":"","minute":"","second":"","storage":"1","varName":"prop","name":"Create Embed Message"},{"storage":"1","varName":"prop","message":"${tempVars(\"wiadomosc\")}","name":"Set Embed Description"},{"storage":"1","varName":"prop","message":"Autor propozycji: ${tempVars(\"user\")}","footerIcon":"","name":"Set Embed Footer"},{"storage":"1","varName":"prop","channel":"6","varName2":"sug","storage3":"1","varName3":"prop2","iffalse":"0","iffalseVal":"","messageContent":"","name":"Send Embed Message"},{"storage":"1","varName":"prop2","emoji":"4","varName2":"👍","varName3":"","name":"Add Reaction"},{"storage":"1","varName":"prop2","emoji":"4","varName2":"👎","varName3":"","name":"Add Reaction"},{"storage":"0","varName":"","name":"Delete Message"}]}]{
+  "name": "ostrzez",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "jsexV",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "KICK_MEMBERS",
+      "iftrue": "3",
+      "iftrueVal": "5",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#FF0000",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "permsembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "permsembed",
+      "message": "**Błąd:** Brak uprawnień.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "permsembed",
+      "message": "Chyba nie masz uprawnień :(",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "permsembed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#55FF00",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embedinformacje",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embedinformacje",
+      "message": "Chcesz dać warna użytkownikowi?\n**Wpisz:** `!ostrzez *@user* *(powod)*`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embedinformacje",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"id\")}.warnings",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "warnings",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "img",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "menusertag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "authusertag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "img2",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "server",
+      "name": "Store Server Info"
+    },
+    {
+      "info": "2",
+      "infoIndex": "1",
+      "storage": "2",
+      "varName": "user",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "2",
+      "varName": "reason",
+      "name": "Store Command Params"
+    },
+    {
+      "title": "",
+      "author": "Dodano Ostrzeżenie!",
+      "color": "#FF0000",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"img\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed-info",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed-info",
+      "fieldName": "●  Użytkownik",
+      "message": "${tempVars(\"menusertag\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed-info",
+      "fieldName": "●  Nadający",
+      "message": "${tempVars(\"authusertag\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed-info",
+      "fieldName": "●  Powód",
+      "message": "${serverVars(\"reason\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed-info",
+      "channel": "0",
+      "varName2": "reported",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"id\")}.warnings",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "0"
+}
